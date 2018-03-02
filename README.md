@@ -15,3 +15,5 @@ Config through [Razzle](https://github.com/jaredpalmer/razzle)
 
 `npm start`
 
+sometimes you need to kill it (ctrl-c) and run again
+

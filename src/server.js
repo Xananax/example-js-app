@@ -68,7 +68,7 @@ server
               ${process.env.NODE_ENV === 'production'
                 ? `<script src="${assets.client.js}" defer></script>`
                 : `<script src="${assets.client.js}" defer crossorigin></script>`}
-              <link rel="stylesheet" href="template/assets/css/main.css" />
+              <link rel="stylesheet" href="assets/css/main.css" />
             </head>
             <body class="is-preload">
             <script src="assets/js/jquery.min.js"></script>

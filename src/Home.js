@@ -1,22 +1,14 @@
 import React from 'react';
-import logo from './react.svg';
 import './Home.css';
 
 const Section = ({ icon_name, title, body }) =>
   <section>
     <section className="content">
       <header>
-        <a href="#" className={`icon fa-${icon_name}-o`}><span className="label">Icon</span></a>
+        <a href="" className={`icon fa-${icon_name}-o`}><span className="label">Icon</span></a>
         <h3>{title}</h3>
       </header>
       <p>{body}</p>
-    </section>
-  </section>
-
-const BootstrapSection = ({children}) =>
-  <section className="wrapper">
-    <section className="inner">
-      {children}
     </section>
   </section>
 
@@ -40,7 +32,7 @@ class Home extends React.Component {
 			<header id="header">
 				<a className="logo" href="index.html">Industrious</a>
 				<nav>
-					<a href="#menu">Menu</a>
+					<a href="menu">Menu</a>
 				</nav>
 			</header>
 
@@ -60,8 +52,8 @@ class Home extends React.Component {
 					<section className="highlights">
             { has_loaded 
             ? services.map( 
-                ( section ) => 
-						    <Section icon_name={section.icon} title={section.title} body={section.body}/>
+                ( section, index ) => 
+						    <Section icon_name={section.icon} title={section.title} body={section.body} key={index}/>
               )
             : <div> ...LOADING... </div>
             }
@@ -133,19 +125,19 @@ class Home extends React.Component {
 						<section>
 							<h4>Sem turpis amet semper</h4>
 							<ul className="alt">
-								<li><a href="#">Dolor pulvinar sed etiam.</a></li>
-								<li><a href="#">Etiam vel lorem sed amet.</a></li>
-								<li><a href="#">Felis enim feugiat viverra.</a></li>
-								<li><a href="#">Dolor pulvinar magna etiam.</a></li>
+								<li><a href="">Dolor pulvinar sed etiam.</a></li>
+								<li><a href="">Etiam vel lorem sed amet.</a></li>
+								<li><a href="">Felis enim feugiat viverra.</a></li>
+								<li><a href="">Dolor pulvinar magna etiam.</a></li>
 							</ul>
 						</section>
 						<section>
 							<h4>Magna sed ipsum</h4>
 							<ul className="plain">
-								<li><a href="#"><i className="icon fa-twitter">&nbsp;</i>Twitter</a></li>
-								<li><a href="#"><i className="icon fa-facebook">&nbsp;</i>Facebook</a></li>
-								<li><a href="#"><i className="icon fa-instagram">&nbsp;</i>Instagram</a></li>
-								<li><a href="#"><i className="icon fa-github">&nbsp;</i>Github</a></li>
+								<li><a href=""><i className="icon fa-twitter">&nbsp;</i>Twitter</a></li>
+								<li><a href=""><i className="icon fa-facebook">&nbsp;</i>Facebook</a></li>
+								<li><a href=""><i className="icon fa-instagram">&nbsp;</i>Instagram</a></li>
+								<li><a href=""><i className="icon fa-github">&nbsp;</i>Github</a></li>
 							</ul>
 						</section>
 					</section>

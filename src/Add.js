@@ -20,7 +20,7 @@ export default class AddService extends React.Component{
         fetch('/new?title='+title+'&body='+body+'&icon='+icon)
             .then( (response) => response.json() )
             .then( response => {
-                if(response.status==200){
+                if(response.status===200){
                     this.setState({message:'service added, thank you you\'re cool'})
                 }else{
                     this.setState({is_error:true,message:response.message})
